@@ -1,6 +1,8 @@
 # demisto-demo 
 
-This docker is a prebuilt container with this code installed
+This docker is a prebuilt container with the code above already installed and ready to go.
+For more information please visit the docker hub site here. 
+https://hub.docker.com/r/k1west2/demisto-api
 
 docker pull k1west2/demisto-api
 
