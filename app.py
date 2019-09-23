@@ -5,6 +5,7 @@ from flask import Flask, json, request, Response, jsonify
 import json
 import logging
 
+#Reads the API key from a file
 with open('apikeys.txt') as json_file:
     data = json.load(json_file)
     json_file.close()
@@ -18,8 +19,8 @@ app = Flask(__name__)
 @app.route('/json-pan', methods=['POST'])
 def json_req():
 
-
-    #parsed_json = (json.loads())
+    #The Palo Alto Networks FW triggers on a log event then POST's JSON to this function
+    #This pulls all the fields into the code from the POST. There are empty fields for future use
     request_json = request.get_json()
 
     lt = request_json['logtype']
@@ -37,12 +38,10 @@ def json_req():
 
     bol = request_json['boolean_test']
     
-    
-
-#########
-    
 
     
+
+    #Demisto - Create a new incident that runs a playbook
     host = 'https://api.demistodemo.io' 
     #host = 'https://192.168.55.166'
 
