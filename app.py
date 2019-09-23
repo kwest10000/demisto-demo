@@ -43,8 +43,8 @@ def json_req():
     
 
     
-    #host = 'https://api.demistodemo.io' 
-    host = 'https://192.168.55.166'
+    host = 'https://api.demistodemo.io' 
+    #host = 'https://192.168.55.166'
 
     api_instance = demisto_client.configure(base_url=host, api_key=apikey, debug=False, verify_ssl=False)
 
