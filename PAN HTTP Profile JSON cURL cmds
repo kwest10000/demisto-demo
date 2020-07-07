@@ -18,4 +18,4 @@
 } 
 
 ###Test to worker node without Palo Alto Networks HTTP Profile
-curl -H "Content-type: application/json" -X POST http://127.0.0.1:4000/json-pan -d '{"logtype" : "threat","severity" : "high","ip" : "8.8.8.8","category" : "news","app" : "ssl","url" : "","additional_info" : {"value1" : "1","value2" : "2"},"attributes" : ["att1", "att2", "att3"],"boolean_test" : true}'
+curl -H "Content-type: application/json" -X POST http://127.0.0.1:4000/json -d '{"logtype" : "threat","severity" : "high","ip" : "8.8.8.8","category" : "news","app" : "ssl","url" : "","additional_info" : {"value1" : "1","value2" : "2"},"attributes" : ["att1", "att2", "att3"],"boolean_test" : true}'
