@@ -1,5 +1,5 @@
 
 demisto-py==2.0.0
-Flask==1.1.1
+Flask==2.3.2
 
 
